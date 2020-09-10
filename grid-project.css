@@ -42,25 +42,117 @@ hr {
 }
 
 /* Main Grid Styles */
+.grid__container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "header"
+    "main sidebar"
+    "other-news"
+    "smarter-living"
+    "features"
+    "discovery"
+    "most-popular"
+    "news"
+    "footer";
 
-
-
+}
+.grid__section {
+  border: 1px solid #333333;
+}
+.flex-container-1{
+  display: flex;
+  height: 85px;
+  /* grid-area: 6 / 1 / 1 / 1 */
+  grid-column: 1/-1;
+}
+.flex__item{
+  display: inline-block;
+  height: inherit;
+}
+.flex__item-1,
+.flex__item-2,
+.flex__item-3{
+  border-color:4px solid red;
+    flex-grow: 2;
+}
+.flex__item-4,
+.flex__item-5{
+  flex-grow: 1;
+}
 /* Grid Section 1 - Flex Styles */
-
-
-
+.grid_section-1 {
+  grid-area: "header";
+}
 /* Grid Section 2 - Nested Grid Styles */
+.grid__section-2 {
+  grid-area: "main sidebar";
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  grid-template-rows: auto auto auto auto auto auto auto;
+}
+.grid__item-2-1 {
+grid-column: span 6;
+border: solid gold;
 
-
-
+}
+.grid__item-2-2{
+  grid-column: span 2;
+  grid-row: 2;
+  border:solid purple;
+}
+.grid__item-2-3{
+  grid-column: span 4;
+  border: solid red;
+}
+.grid__item-2-4{
+  grid-column: span 6;
+  border: solid blue;
+}
+.grid__item-2-5{
+  grid-column: span 6;
+  border: solid gray;
+}
+.grid__item-2-6{
+  grid-column: span 6;
+  border: solid gray;
+}
+.grid__item-2-7{
+  grid-column: span 4;
+  border: solid gray;
+}
+.grid__item-2-8{
+  grid-column: span 2;
+  border: solid gray;
+}
+.grid__item-2-9{
+  grid-column: span 6;
+  border: solid purple;
+}
 /* Grid Section 3 Styles */
-
-
-
+.grid_section-3 {
+  grid-area: "other-news";
+}
 /* Remaining Section Styles */
-
-
-
+.grid_section-4 {
+  grid-area: "smarter-living";
+}
+.grid_section-5 {
+  grid-area: "features";
+}
+.grid_section-6 {
+  grid-area: "discovery";
+}
+.grid_section-7 {
+  grid-area: "most-popular";
+}
+.grid_section-8 {
+  grid-area: "news";
+}
+.grid_section-9 {
+  grid-area: "footer";
+}
 /* Responsive Styles */
 
 @media (min-width:1024px) {
